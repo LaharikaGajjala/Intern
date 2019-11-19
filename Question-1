@@ -1,0 +1,14 @@
+import re 
+regex = '^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
+def check(myList=[],*args): 
+    for x in myList:
+        if(re.search(regex,x)): 
+            print(x)
+	
+if __name__ == '__main__' : 
+    n=int(input())
+    email=[]
+    for i in range(0,n):
+        email.append(input())
+    check(email)
+    
